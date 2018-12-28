@@ -18,4 +18,8 @@
   </li>
 </ul>
 
+<div *ngIf="chart">
+  <canvas id="canvas">{{ chart }}</canvas>
+</div>
+
 <router-outlet></router-outlet>
