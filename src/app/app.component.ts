@@ -8,7 +8,6 @@ import { Chart } from 'chart.js';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'My Graph';
 
   chart = []; // This will hold our chart info
 
