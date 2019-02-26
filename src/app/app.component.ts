@@ -10,10 +10,34 @@ import { Chart } from 'chart.js';
 export class AppComponent {
 
   chart = []; // This will hold our chart info
+  numberOfMinutesDataExistsFor = "";
+  numberOfMinutesHeaterIsOn = "";
+  averageHouseTemperature = "";
+  averageExternalTemperature = "";
+  averageInternalExternalTemperatureDifference = "";
+  averageHouseTempSetting = "";
+  averageWindSpeed = "";
+  averageTimeBetweenHeaterCyclesAtOneTemp = "";
 
   constructor(private _weather: WeatherService) {}
 
   ngOnInit() {
+
+    this._weather.dailySummary()
+      .subscribe(res => {
+        console.log("summary", res);
+
+        this.numberOfMinutesDataExistsFor  = res["numberOfMinutesDataExistsFor"];
+        this.numberOfMinutesHeaterIsOn  = res["numberOfMinutesHeaterIsOn"];
+        this.averageHouseTemperature  = res["averageHouseTemperature"];
+        this.averageExternalTemperature  = res["averageExternalTemperature"];
+        this.averageInternalExternalTemperatureDifference  = res["averageInternalExternalTemperatureDifference"];
+        this.averageHouseTempSetting  = res["averageHouseTempSetting"];
+        this.averageWindSpeed  = res["averageWindSpeed"];
+        this.averageTimeBetweenHeaterCyclesAtOneTemp  = res["averageTimeBetweenHeaterCyclesAtOneTemp"];
+
+      });
+
     this._weather.dailyForecast()
       .subscribe(res => {
 

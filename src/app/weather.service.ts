@@ -18,4 +18,9 @@ export class WeatherService {
       .pipe(map(result => result));
   }
 
+  dailySummary() {
+    return this._http.get("/api/reports/daily-summary")
+      .pipe(map(result => result));
+  }
+
 }

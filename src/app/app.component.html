@@ -1,6 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
 <div *ngIf="chart">
   <canvas id="canvas">{{ chart }}</canvas>
 </div>
+
+<h3>Yesterday's House Summary</h3>
+<br/>Number Of Minutes Data Exists For: {{numberOfMinutesDataExistsFor}}
+<br/>Number Of Minutes Heater Is On: {{numberOfMinutesHeaterIsOn}}
+<br/>Average House Temperature: {{averageHouseTemperature}}
+<br/>Average External Temperature: {{averageExternalTemperature}}
+<br/>Average Internal External Temperature Difference: {{averageInternalExternalTemperatureDifference}}
+<br/>Average House Temp Setting: {{averageHouseTempSetting}}
+<br/>Average Wind Speed: {{averageWindSpeed}}
+<br/>Average Time Between Heater Cycles At One Temp: {{averageTimeBetweenHeaterCyclesAtOneTemp}}
 
 <router-outlet></router-outlet>
