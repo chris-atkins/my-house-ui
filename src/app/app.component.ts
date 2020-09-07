@@ -12,12 +12,14 @@ export class AppComponent {
   chart = []; // This will hold our chart info
   numberOfMinutesDataExistsFor = "";
   numberOfMinutesHeaterIsOn = "";
+  numberOfMinutesACIsOn = "";
   averageHouseTemperature = "";
   averageExternalTemperature = "";
   averageInternalExternalTemperatureDifference = "";
   averageHouseTempSetting = "";
   averageWindSpeed = "";
   averageTimeBetweenHeaterCyclesAtOneTemp = "";
+  averageTimeBetweenACCyclesAtOneTemp = "";
 
   constructor(private _weather: WeatherService) {}
 
@@ -29,12 +31,14 @@ export class AppComponent {
 
         this.numberOfMinutesDataExistsFor  = res["numberOfMinutesDataExistsFor"];
         this.numberOfMinutesHeaterIsOn  = res["numberOfMinutesHeaterIsOn"];
+        this.numberOfMinutesACIsOn  = res["numberOfMinutesACIsOn"];
         this.averageHouseTemperature  = res["averageHouseTemperature"];
         this.averageExternalTemperature  = res["averageExternalTemperature"];
         this.averageInternalExternalTemperatureDifference  = res["averageInternalExternalTemperatureDifference"];
         this.averageHouseTempSetting  = res["averageHouseTempSetting"];
         this.averageWindSpeed  = res["averageWindSpeed"];
         this.averageTimeBetweenHeaterCyclesAtOneTemp  = res["averageTimeBetweenHeaterCyclesAtOneTemp"];
+        this.averageTimeBetweenACCyclesAtOneTemp  = res["averageTimeBetweenACCyclesAtOneTemp"];
 
       });
 
