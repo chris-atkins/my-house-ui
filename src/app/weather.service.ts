@@ -23,4 +23,14 @@ export class WeatherService {
       .pipe(map(result => result));
   }
 
+  summaryForDay(dateString) {
+      return this._http.get("/api/reports/daily-data/" + dateString)
+        .pipe(map(result => result));
+  }
+
+  dataPointsForDay(dateString) {
+      return this._http.get("/api/reports/daily-summary/" + dateString)
+        .pipe(map(result => result));
+  }
+
 }

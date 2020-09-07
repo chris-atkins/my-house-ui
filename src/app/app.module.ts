@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherService } from './weather.service';
+import {DailyGraphComponent} from "./daily.graph.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DailyGraphComponent
   ],
   imports: [
     BrowserModule,
