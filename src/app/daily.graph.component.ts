@@ -4,6 +4,7 @@ import { Chart } from 'chart.js';
 import {ActivatedRoute} from "@angular/router";
 
 @Component({
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -26,7 +27,7 @@ export class DailyGraphComponent {
   ) {}
 
   ngOnInit() {
-    const dateString = +this.route.snapshot.paramMap.get('dateString');
+    const dateString = this.route.snapshot.paramMap.get('dateString');
     this._weather.summaryForDay(dateString)
       .subscribe(res => {
         console.log("summary", res);
