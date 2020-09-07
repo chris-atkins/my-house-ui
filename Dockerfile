@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN curl -sL https://rpm.nodesource.com/setup_11.x | bash -
+RUN curl -sL https://rpm.nodesource.com/setup_12.x | bash -
 RUN yum -y install nodejs
 RUN npm install -g @angular/cli
 
